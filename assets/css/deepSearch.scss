@@ -1,0 +1,113 @@
+@import "default";
+@import "navbar";
+@import "sidebar";
+@import "watchContent";
+@import "botnav";
+@import "searchSection";
+@import "animation";
+
+.deep-search {
+    position: relative;
+    max-width: 768px;
+    width: 100%;
+    margin: 180px auto 30px;
+    padding: 15px;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        h1 {
+            font-size: 22px;
+            font-weight: 400;
+            text-align: left;
+            color: #fff;
+        }
+        img {
+            display: none;
+            width: 25px;
+            height: 25px;
+            animation: spinner 1.2s infinite linear;
+        }
+    }
+
+    input {
+        background-color: #000;
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        padding: 5px 20px;
+        border: 2px solid $color;
+        border-radius: 10px;
+    }
+    button {
+        position: relative;
+        width: 100%;
+        height: 48px;
+        background-color: $color;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        margin-top: 30px;
+        outline: none;
+        cursor: pointer;
+        @extend %transition;
+        &:hover {
+            background-color: rgba(255, 0, 46, 0.8);
+        }
+    }
+}
+
+.status {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 5px auto 20px;
+
+    &.success {
+        background-color: #48c774;
+    }
+    &.error {
+        background-color: #f14668;
+    }
+    &.warning {
+        background-color: #ffdd57;
+        .status-icon,
+        .close-icon {
+            fill: rgba(0, 0, 0, 0.7) !important;
+        }
+        span {
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.7) !important;
+        }
+    }
+
+    .status-icon,
+    .close-icon {
+        fill: #fff;
+        width: 22px;
+        height: 22px;
+    }
+
+    span {
+        font-size: 15px;
+        font-weight: 300;
+        color: #fff;
+        margin-left: 10px;
+    }
+
+    .close-icon {
+        margin-left: auto;
+        cursor: pointer;
+    }
+}

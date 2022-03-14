@@ -1,0 +1,265 @@
+.content {
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    margin: 100px auto 0;
+    padding: 15px;
+    @media (max-width: 576px) {
+        margin: 80px auto;
+    }
+
+    .header {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px auto 15px;
+
+        h1 {
+            font-size: 22px;
+            font-weight: 400;
+            text-align: left;
+            color: #fff;
+        }
+
+        .year {
+            position: relative;
+            background-color: $color;
+            width: 70px;
+            height: 30px;
+            @extend %flex;
+            font-size: 15px;
+            font-weight: 500;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+
+    .movieDetails {
+        span {
+            font-size: 18px;
+            font-weight: 300;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    .posterBackdrop {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-column-gap: 30px;
+        @media (max-width: 576px) {
+            display: unset;
+        }
+
+        .ratio {
+            position: relative;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            padding-bottom: 150%;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .ratio-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .poster {
+            position: relative;
+            width: 100%;
+            @media (max-width: 576px) {
+                display: none;
+            }
+            .playTrailer {
+                position: relative;
+                width: 100%;
+                height: 48px;
+                background-color: $color;
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                outline: none;
+                cursor: pointer;
+                @extend %transition;
+                &:hover {
+                    background-color: rgba(255, 0, 46, 0.8);
+                }
+            }
+        }
+
+        .backdrop {
+            position: relative;
+            width: 100%;
+            .ratio {
+                padding-bottom: 50% !important;
+                background-color: rgba(0, 0, 0, 0.4);
+
+                img {
+                    z-index: -1;
+                }
+                svg {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 70px;
+                    height: 70px;
+                    fill: rgba(255, 255, 255, 0.9);
+                    @media (max-width: 768px) {
+                        width: 60px;
+                        height: 60px;
+                    }
+                    @media (max-width: 576px) {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+            .overview {
+                font-size: 18px;
+                font-weight: 300;
+                text-align: left;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.7);
+                margin: 0;
+                @media (max-width: 576px) {
+                    font-size: 17px;
+                }
+            }
+
+            .movieDetails {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 15px -5px;
+                @media (max-width: 576px) {
+                    margin: 25px -5px;
+                }
+                > span {
+                    background-color: #343434;
+                    width: auto;
+                    height: 30px;
+                    padding: 4px 12px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    color: #fff;
+                    border: none;
+                    border-radius: 10px;
+                    margin: 5px;
+                    @extend %flex;
+                }
+                div {
+                    background-color: #343434;
+                    width: auto;
+                    height: 30px;
+                    padding: 4px 12px;
+                    border: none;
+                    border-radius: 10px;
+                    margin: 5px;
+                    @extend %flex;
+                    img {
+                        width: 15px;
+                        height: 15px;
+                    }
+                    span {
+                        font-size: 15px;
+                        font-weight: 500;
+                        white-space: nowrap;
+                        color: #fff;
+                        margin-left: 5px !important;
+                    }
+                }
+            }
+
+            .playTrailer {
+                position: relative;
+                width: 100%;
+                height: 48px;
+                background-color: $color;
+                font-size: 17px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                outline: none;
+                cursor: pointer;
+                @extend %transition;
+                display: none;
+                &:hover {
+                    background-color: rgba(255, 0, 46, 0.8);
+                }
+                @media (max-width: 576px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.trailerSection {
+    @extend %flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s linear;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    img {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .ratioSection {
+        position: relative;
+        max-width: 1200px;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        .ratio {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

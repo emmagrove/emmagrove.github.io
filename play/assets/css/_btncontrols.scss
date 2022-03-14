@@ -1,0 +1,166 @@
+.btncontrols {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .btncontrol-cn {
+        position: relative;
+        width: 2em;
+        height: 2em;
+        padding: 1.125em 1.5em 1.5em 1.5em;
+        box-sizing: content-box;
+        cursor: pointer;
+        &:hover {
+            .flx-btn {
+                transform: scale(1.3);
+            }
+        }
+        &.cn-subtitles {
+            margin-left: auto;
+        }
+        .flx-btn {
+            fill: #fff;
+            width: 100%;
+            height: 100%;
+            @extend %transition;
+        }
+
+        // VOLUME SECTION
+        .volumeRange-cn {
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -120px) rotate(-90deg);
+            background-color: #262626;
+            width: 180px;
+            height: 35px;
+            border: none;
+            border-radius: 7px;
+            pointer-events: none;
+            &.volumeRange-active {
+                opacity: 1;
+                transition: opacity 0.2s linear;
+                pointer-events: auto;
+            }
+            @extend %flex;
+            .volumeRange {
+                position: absolute;
+                background-color: #e50914;
+                width: calc(100% - 40px);
+                height: 0.5em;
+                cursor: pointer;
+                @extend %transition;
+
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    border: none;
+                    height: 1.3em;
+                    width: 1.3em;
+                    border-radius: 50%;
+                    background: $red;
+                    cursor: pointer;
+                    &:hover {
+                        height: 1.4em;
+                        width: 1.4em;
+                    }
+                }
+                /* All the same stuff for Firefox */
+                &::-moz-range-thumb {
+                    border: none;
+                    height: 1.3em;
+                    width: 1.3em;
+                    border-radius: 50%;
+                    background: $red;
+                    cursor: pointer;
+                    &:hover {
+                        height: 1.4em;
+                        width: 1.4em;
+                    }
+                }
+                /* All the same stuff for IE */
+                &::-ms-thumb {
+                    border: none;
+                    height: 1.3em;
+                    width: 1.3em;
+                    border-radius: 50%;
+                    background: $red;
+                    cursor: pointer;
+                    &:hover {
+                        height: 1.4em;
+                        width: 1.4em;
+                    }
+                }
+            }
+        }
+
+        // SUBTITLES
+        .subtitles-section {
+            opacity: 0;
+            @extend %flex;
+            flex-direction: column;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, calc(-100% - 15px));
+            background-color: #262626;
+            width: auto;
+            min-height: 120px;
+            height: auto;
+            border: none;
+            border-radius: 7px;
+            padding: 1em 0;
+            pointer-events: none;
+            &.subtitles-active {
+                transition: opacity 0.2s linear;
+                opacity: 1;
+                pointer-events: auto;
+            }
+            h3 {
+                width: 100%;
+                font-size: 1em;
+                font-weight: 600;
+                color: #fff;
+                white-space: nowrap;
+                text-align: center;
+                margin: 0;
+                padding: 1em 3em;
+            }
+            span {
+                position: relative;
+                width: 100%;
+                font-size: 0.9em;
+                padding: 1em 3em;
+                color: #b3b3b3;
+                font-weight: 400;
+                white-space: nowrap;
+                text-align: center;
+                @extend %transition;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    color: #fff;
+                }
+                &.active-sub {
+                    color: #fff;
+                    &:before {
+                        content: "";
+                        background-image: url("../img/tick.svg");
+                        width: 22px;
+                        height: 22px;
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(calc(-50% + 1px));
+                        left: 25px;
+                    }
+                }
+            }
+            .subtitles-list {
+                @extend %flex;
+                flex-direction: column;
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+}

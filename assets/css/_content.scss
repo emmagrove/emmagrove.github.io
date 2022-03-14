@@ -1,0 +1,128 @@
+.content {
+    position: relative;
+    height: auto;
+    padding: 15px;
+
+    .section-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 60px 0 15px;
+
+        h2 {
+            font-size: 19px;
+            font-weight: 500;
+            text-align: left;
+            color: #fff;
+            @media (max-width: 576px) {
+                font-size: 17px;
+            }
+        }
+
+        .angle {
+            width: auto;
+            height: 22px;
+            outline: none;
+            @media (max-width: 768px) {
+                height: 20px;
+            }
+            @media (max-width: 576px) {
+                height: 18px;
+            }
+            svg {
+                width: 22px;
+                height: 22px;
+                fill: #fff;
+                cursor: pointer;
+                @media (max-width: 768px) {
+                    width: 20px;
+                    height: 20px;
+                }
+                @media (max-width: 576px) {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            svg:nth-child(2) {
+                margin-left: 15px;
+            }
+            .angle-disabled {
+                fill: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
+
+    .section {
+        position: relative;
+        width: 100%;
+        height: auto;
+        &:last-child {
+            margin-bottom: 80px;
+        }
+
+        .poster {
+            position: relative;
+            width: 100%;
+            padding-bottom: 150%;
+            background-color: #161616;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover {
+                .poster-hover {
+                    transition-delay: 0.5s;
+                    opacity: 1;
+                    svg {
+                        animation: heartbeat 0.5s 2 linear;
+                    }
+                }
+            }
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border: none;
+                border-radius: 10px;
+            }
+
+            .lazyload,
+            .lazyloading {
+                opacity: 0;
+            }
+            .lazyloaded {
+                opacity: 1;
+                transition: 300ms linear;
+            }
+            .lazyload:not([src]) {
+                visibility: hidden;
+            }
+
+            .poster-hover {
+                opacity: 0;
+                @extend %flex;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.6);
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border: none;
+                border-radius: 10px;
+                pointer-events: none;
+                transition: 0.2s linear;
+            }
+
+            svg {
+                width: 50px;
+                height: 50px;
+                fill: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+}
