@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fliiix - Edit a Movie</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/movie.css">
+</head>
+<body>
+
+<nav>
+	<div class="container nav-container">
+		<a href="index.html"><img src="assets/img/logo.svg" class="nav-logo" alt="Fliiix Logo"></a>
+	</div>
+</nav>	
+
+<div class="quick-add">
+	<div class="header">
+		<h1>Edit a Movie</h1>
+		<img src="assets/img/spinner.png" class="add-movie-spinner" alt="">
+		<img src="assets/img/trash.svg" id="deleteMovie" alt="">
+	</div>
+	<div class="status success" style="display: none">
+		<svg class="status-icon"><use xlink:href="assets/img/status.svg#tick"></use></svg>
+		<span>Movie Edited Successfully</span>
+		<svg class="close-icon"><use xlink:href="assets/img/status.svg#close"></use></svg>
+	</div>
+	<div class="status error" style="display: none">
+		<svg class="status-icon"><use xlink:href="assets/img/status.svg#error"></use></svg>
+		<span>Unknown Error</span>
+		<svg class="close-icon"><use xlink:href="assets/img/status.svg#close"></use></svg>
+	</div>
+	<div class="status delete">
+		<span>Delete Movie?</span>
+		<span class="close-icon" id="confirmDelete">DELETE</span>
+		<span class="close-icon" id="cancelDelete">CANCEL</span>
+	</div>
+	<input type="text" id="find" class="add-input" placeholder="Movie Title or IMDb URL">
+	<button class="add-btn edit-btn">GET MOVIE</button>
+</div>
+
+
+<form action="" method="POST">
+
+	<div class="add">
+	<input type="hidden" name="id">
+		<input type="text" name="imdbID" class="add-input fullWidth" placeholder="IMDB ID">
+		<input type="text" name="title" class="add-input" placeholder="Title">
+		<input type="text" name="year" class="add-input" placeholder="Year">
+		<input type="text" name="rate" class="add-input" placeholder="Rate">
+		<input type="text" name="views" class="add-input" placeholder="Views">
+		<input type="text" name="poster" class="add-input" placeholder="Poster">
+		<input type="text" name="backdrop" class="add-input" placeholder="Backdrop">
+		<input type="text" name="releaseDate" class="add-input fullWidth" placeholder="Release Date">
+		<div class="posterPreview"><img src="" id="posterPreview" alt=""></div>
+		<div class="backdropPreview"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" id="backdropPreview" alt=""></div>
+		<input type="text" name="trailer" class="add-input" placeholder="Trailer URL">
+		<input type="text" name="video" class="add-input" placeholder="Video URL">
+		<textarea name="overview" class="overview add-input" placeholder="Overview"></textarea>
+		<input type="text" name="tceng" class="add-input" placeholder="Trailer URL">
+		<input type="text" name="tcara" class="add-input" placeholder="Video URL">
+		<div class="genre">
+			<span data-genre="Action">Action</span>
+			<span data-genre="Adventure">Adventure</span>
+			<span data-genre="Animation">Animation</span>
+			<span data-genre="Comedy">Comedy</span>
+			<span data-genre="Crime">Crime</span>
+			<span data-genre="Drama">Drama</span>
+			<span data-genre="Family">Family</span>
+			<span data-genre="Fantasy">Fantasy</span>
+			<span data-genre="Horror">Horror</span>
+			<span data-genre="Mystery">Mystery</span>
+			<span data-genre="Romance">Romance</span>
+			<span data-genre="Sci-Fi">Sci-Fi</span>
+			<span data-genre="Thriller">Thriller</span>
+		</div>
+		<input type="hidden" name="genres">
+		<button class="add-btn" name="editMovie">EDIT MOVIE</button>
+	</div>
+
+</form>
+
+
+</body>
+</html>

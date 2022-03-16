@@ -1,0 +1,203 @@
+@import "default";
+@import "navbar";
+@import "status";
+@import "animation";
+
+.quick-add {
+    position: relative;
+    max-width: 768px;
+    width: 100%;
+    margin: 180px auto 15px;
+    padding: 15px 15px 0px 15px;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        h1 {
+            font-size: 22px;
+            font-weight: 400;
+            text-align: left;
+            color: #fff;
+        }
+        img {
+            display: none;
+            width: 25px;
+            height: 25px;
+            animation: spinner 1.2s infinite linear;
+        }
+        #deleteMovie {
+            animation: none;
+            cursor: pointer;
+        }
+    }
+
+    .add-input {
+        background-color: #000;
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        padding: 5px 20px;
+        border: 2px solid $color;
+        border-radius: 10px;
+    }
+    .add-btn {
+        position: relative;
+        width: 100%;
+        height: 48px;
+        background-color: $color;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        margin-top: 30px;
+        outline: none;
+        cursor: pointer;
+        @extend %transition;
+        &:hover {
+            background-color: rgba(255, 0, 46, 0.8);
+        }
+    }
+}
+
+.add {
+    position: relative;
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+    }
+
+    .add-input {
+        background-color: #000;
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        padding: 5px 20px;
+        border: 2px solid $color;
+        border-radius: 10px;
+    }
+
+    .overview {
+        grid-column: 1 / 3;
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+        min-height: 200px;
+        max-height: 400px;
+        padding: 15px;
+        @media (max-width: 576px) {
+            grid-column: unset;
+        }
+    }
+
+    .posterPreview,
+    .backdropPreview {
+        position: relative;
+        background-color: #000;
+        width: 100%;
+        height: 180px;
+        border: 2px solid $color;
+        border-radius: 10px;
+    }
+
+    .posterPreview {
+        @extend %flex;
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .backdropPreview {
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
+    }
+
+    .fullWidth {
+        grid-column: 1 / 3;
+        @media (max-width: 576px) {
+            grid-column: unset;
+        }
+    }
+
+    .genre {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+        @media (max-width: 576px) {
+            grid-column: unset;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: 414px) {
+            grid-column: unset;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        span {
+            background-color: #000;
+            width: 100%;
+            height: 42px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid rgba(255, 0, 46, 0.7);
+            border-radius: 10px;
+            @extend %flex;
+            @extend %transition;
+            cursor: pointer;
+            &:hover {
+                border-color: rgba(255, 0, 46, 1);
+            }
+        }
+        .active-genre {
+            background-color: $color;
+            border-color: $color;
+        }
+    }
+
+    .add-btn {
+        grid-column: 1 / 3;
+        position: relative;
+        width: 100%;
+        height: 48px;
+        background-color: $color;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        margin-top: 30px;
+        outline: none;
+        cursor: pointer;
+        @extend %transition;
+        @media (max-width: 576px) {
+            grid-column: unset;
+        }
+        &:hover {
+            background-color: rgba(255, 0, 46, 0.8);
+        }
+    }
+}
