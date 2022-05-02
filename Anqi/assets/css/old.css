@@ -1,0 +1,155 @@
+/*######################## STEPS ########################*/
+#steps{
+	position: relative;
+	max-width: 100%;
+	width: 768px;
+	height: 60px;
+	margin: 80px auto;
+	display: flex;
+    justify-content: space-between;
+}
+.step{
+	background-color: #fff;
+	width: 60px;
+	height: 60px;
+	border: 2px solid #15c39a;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	font-weight: 400;
+	color: #15c39a;
+	transition: .2s ease;
+	z-index: 1;
+}
+.active_step{
+	background-color: #15c39a;
+	color: #fff;
+}
+#second_progess{
+	content: '';
+	width: 50%;
+	height: 2px;
+	background-color: #15c39a;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#third_progess{
+	content: '';
+	width: 50%;
+	height: 2px;
+	background-color: #15c39a;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.inactive_step{
+	border-color: #c5c6c9;
+	color: #c5c6c9;
+}
+.inactive_progress{
+	background-color: #c5c6c9!important;
+}
+/*######################## END STEPS ########################*/
+
+
+
+/*######################## NAVBOTTOM ########################*/
+#navbottom{
+	position: relative;
+	background-color: #fff;
+	width: 100%;
+	height: 60px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	box-shadow: 0 -0.938em 2.188em rgba(50,50,93,.1), 0 -0.313em 0.938em rgba(0,0,0,.07);
+}
+#cancel{
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: left;
+	color: #15c39a;
+	margin-left: 15px;
+	line-height: 60px;
+	width: 60px;
+	cursor: pointer;
+}
+#steps_buttom{
+	position: relative;
+	width: 280px;
+	margin-right: 15px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 15px;
+	justify-self: end;
+}
+#previous_btn, #next_btn{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+#next_btn{
+	background-color: #15c39a;
+	grid-template-columns: auto 30px;
+	border: none;
+	border-radius: 3px;
+	transition: .2s ease;
+}
+#next_btn:hover{
+	background-color: rgba(21,195,154,.8);
+}
+#previous_text, #next_text{
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #15c39a;
+	margin-left: 10px;
+	border: none;
+	cursor: pointer;
+}
+#next_text{
+	margin-left: unset;
+	margin-right: 10px;
+	color: #fff;
+}
+.arrow{
+	width: 8px;
+}
+@media (max-width: 414px){
+	#navbottom{
+		grid-template-columns: 100%;
+	}
+    #cancel{
+        display: none;
+    }
+    #steps_buttom{
+    	width: 100%;
+    	margin-right: unset;
+    	justify-self: unset;
+    }
+    #previous_btn, #next_btn{
+    	width: 140px;
+    }
+    #previous_btn{
+    	left: 15px;
+    }
+    #next_btn{
+    	position: absolute;
+    	right: 15px;
+    }
+}
+/*######################## END NAVBOTTOM ########################*/

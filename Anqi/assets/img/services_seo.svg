@@ -1,0 +1,14 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+	<path fill="none" stroke="#4788c7" stroke-miterlimit="10" d="M12 37.5L18.667 25.5"></path>
+	<path fill="#4788c7" d="M12,36C11.824,36,12.176,36,12,36c-0.828,0-1.5,0.672-1.5,1.5S11.172,39,12,39c0.176,0-0.176,0,0,0 c0.828,0,1.5-0.672,1.5-1.5S12.828,36,12,36z"></path>
+	<path fill="none" stroke="#4788c7" stroke-miterlimit="10" d="M28 37.5L21.333 25.5"></path>
+	<path fill="#4788c7" d="M28 36C28.176 36 27.824 36 28 36c.828 0 1.5.672 1.5 1.5S28.828 39 28 39c-.176 0 .176 0 0 0-.828 0-1.5-.672-1.5-1.5S27.172 36 28 36zM20 34L20 34c-.552 0-1-.448-1-1V2c0-.552.448-1 1-1h0c.552 0 1 .448 1 1v31C21 33.552 20.552 34 20 34z"></path>
+	<path fill="#dff0fe" d="M1.5 5.5H38.5V31.5H1.5z"></path>
+	<path fill="#4788c7" d="M38,6v25H2V6H38 M39,5H1v27h38V5L39,5z"></path>
+	<path fill="none" stroke="#4788c7" stroke-linecap="round" stroke-miterlimit="10" d="M8.5 25.5L12.968 19.5 16.968 21.5 19.968 15.5 23.968 18.5 25.968 15.5 28.968 16.5 31.5 11.689"></path>
+	<g>
+		<path fill="#b6dcfe" d="M0.5 2.5H39.5V5.5H0.5z"></path>
+		<path fill="#4788c7" d="M39,3v2H1V3H39 M40,2H0v4h40V2L40,2z"></path>
+	</g>
+</svg>
