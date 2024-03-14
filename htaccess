@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^genre/(.*)$ genre/index.html?id=$1
+
+RewriteRule ^watch/movie/(.*)$ watch/movie/index.html?id=$1
+RewriteRule ^watch/tv/(.*)$ watch/tv/index.html?id=$1
