@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fliiix</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <svg class="nav-menu-icon" id="menu">
+                <use xlink:href="assets/img/navbar.svg#menu"></use>
+            </svg>
+            <svg class="nav-arrowLeft-icon" id="arrowLeft">
+                <use xlink:href="assets/img/navbar.svg#arrowLeft"></use>
+            </svg>
+            <a href="" class="nav-logo-a"><img src="assets/img/logo.svg" class="nav-logo" alt="Fliiix Logo"></a>
+            <a href="" class="nav-flogo-a"><img src="assets/img/fLogo.svg" class="nav-flogo" alt="Fliiix Logo"></a>
+            <div class="nav-search-input-section">
+                <svg class="nav-input-search-icon">
+                    <use xlink:href="assets/img/navbar.svg#search"></use>
+                </svg>
+                <input type="text" class="nav-search-input" placeholder="Search">
+                <img src="assets/img/spinner.png" class="search-data-spinner" alt="">
+            </div>
+            <svg id="search" class="nav-search-icon">
+                <use xlink:href="assets/img/navbar.svg#search"></use>
+            </svg>
+            <svg class="nav-search-icon-mobile" id="mobileSearch">
+                <use xlink:href="assets/img/navbar.svg#search"></use>
+            </svg>
+        </div>
+    </nav>
+
+
+    <div class="search-overlay"></div>
+    <div class="search-results-section container">
+        <h2>MOVIES & TV SHOWS</h2>
+        <div class="search-results"></div>
+        <div class="noResults">
+            <div>The search for <span class="noResultsSearch"></span> did not have any matches</div>
+        </div>
+    </div>
+
+
+
+    <div class="sideBar">
+        <img src="assets/img/logo.svg" class="sideBar-logo" alt="">
+        <ul>
+            <a href="">
+                <li class="sidebar-active-list">Home</li>
+            </a>
+            <a href="genre/28">
+                <li>Action</li>
+            </a>
+            <a href="genre/12">
+                <li>Adventure</li>
+            </a>
+            <a href="genre/16">
+                <li>Animation</li>
+            </a>
+            <a href="genre/35">
+                <li>Comedy</li>
+            </a>
+            <a href="genre/80">
+                <li>Crime</li>
+            </a>
+            <a href="genre/18">
+                <li>Drama</li>
+            </a>
+            <a href="genre/10751">
+                <li>Family</li>
+            </a>
+            <a href="genre/14">
+                <li>Fantasy</li>
+            </a>
+            <a href="genre/27">
+                <li>Horror</li>
+            </a>
+            <a href="genre/9648">
+                <li>Mystery</li>
+            </a>
+            <a href="genre/10749">
+                <li>Romance</li>
+            </a>
+            <a href="genre/878">
+                <li>Sci-Fi</li>
+            </a>
+            <a href="genre/53">
+                <li>Thriller</li>
+            </a>
+            <a href="">
+                <li class="sideBar-close">Close</li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="sideBar-overlay"></div>
+
+    <div class="landing">
+        <div class="landing-bg" style="background-image: url('assets/img/landing/landing.jpg');"></div>
+        <div class="landing-content">
+            <div class="landing-content-detail">
+                <img src="assets/img/landingLogo.png" class="landingLogo" alt="">
+                <img src="assets/img/landingLogo.png" class="landingLogoMobile" alt="">
+                <div class="landing-info">
+                    <span>2017</span>
+                    <span>13+</span>
+                    <span>IMDB 8.5</span>
+                    <span>1h 37 min</span>
+                </div>
+                <div class="landing-info-mobile"><!-- For phones -->
+                    <span class="info-duration">1h 37 min</span>
+                    <span class="info-age">13+</span>
+                    <div>
+                        <svg>
+                            <use xlink:href="assets/img/landing.svg#imdb"></use>
+                        </svg>
+                        <span>8.5</span>
+                    </div>
+                </div>
+                <p class="summary">The adventures of a young orphan girl living in the late 19th century. Follow Anne as
+                    she learns to navigate her new life on Prince Edward Island, in this new take on L.M. Montgomery's
+                    classic novels.</p>
+                <p class="genre">2019 · Family · Drama · Romance</p>
+                <hr class="hr">
+                <div class="landing-btns">
+                    <a href="watch/tv/70785">
+                        <div>
+                            <svg class="profile-sortDown">
+                                <use xlink:href="assets/img/landing.svg#play"></use>
+                            </svg>
+                            <span>PLAY</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content container">
+
+        <div class="section-title">
+            <h2>Popular on Fliiix</h2>
+            <div class="angle">
+                <svg class="angleLeft angle-disabled">
+                    <use xlink:href="assets/img/angle.svg#angleLeft"></use>
+                </svg>
+                <svg class="angleRight">
+                    <use xlink:href="assets/img/angle.svg#angleRight"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="section owl-carousel" id="popular">
+            <a href="watch/movie/166426">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/qwoGfcg6YUS55nUweKGujHE54Wy.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/tv/71912">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/cZ0d3rtvXPVvuiX22sP79K3Hmjz.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/tv/1396">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/tv/194583">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/wq3vuQzQgbS83zX3malAFWMsSwX.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/movie/59436">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/4wBG5kbfagTQclETblPRRGihk0I.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/movie/508943">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/9x4i9uKGXt8IiiIF5Ey0DIoY738.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/tv/91239">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/luoKpgVwi1E5nQsi7W0UuKHu2Rq.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/tv/110316">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/20mOwAAPwZ1vLQkw0fvuQHiG7bO.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/tv/66732">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/tv/127529">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/kxU1hhebWZGaz8gkMVi8zkZhzVt.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/movie/372058">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/q719jXXEzOoYaps6babgKnONONX.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/tv/60574">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/movie/198663">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/ode14q7WtDugFDp78fo9lCsmay9.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/movie/198184">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/hpnuXlKKWznTgbheGe4iQXzkuwJ.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/movie/62177">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/1XAuDtMWpL0sYSFK0R6EZate2Ux.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a><a href="watch/movie/405774">
+                <div class="poster"><img data-src="https://image.tmdb.org/t/p/w400/rGfGfgL2pEPCfhIvqHXieXFn7gp.jpg"
+                        class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="section-title">
+            <h2>Trending Now</h2>
+            <div class="angle">
+                <svg class="angleLeft angle-disabled">
+                    <use xlink:href="assets/img/angle.svg#angleLeft"></use>
+                </svg>
+                <svg class="angleRight">
+                    <use xlink:href="assets/img/angle.svg#angleRight"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="section owl-carousel" id="trending">
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="section-title">
+            <h2>Action & Adventure</h2>
+            <div class="angle">
+                <svg class="angleLeft angle-disabled">
+                    <use xlink:href="assets/img/angle.svg#angleLeft"></use>
+                </svg>
+                <svg class="angleRight">
+                    <use xlink:href="assets/img/angle.svg#angleRight"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="section owl-carousel" id="actionadventure">
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="section-title">
+            <h2>Fantasy</h2>
+            <div class="angle">
+                <svg class="angleLeft angle-disabled">
+                    <use xlink:href="assets/img/angle.svg#angleLeft"></use>
+                </svg>
+                <svg class="angleRight">
+                    <use xlink:href="assets/img/angle.svg#angleRight"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="section owl-carousel" id="fantasy">
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="section-title">
+            <h2>Horror</h2>
+            <div class="angle">
+                <svg class="angleLeft angle-disabled">
+                    <use xlink:href="assets/img/angle.svg#angleLeft"></use>
+                </svg>
+                <svg class="angleRight">
+                    <use xlink:href="assets/img/angle.svg#angleRight"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="section owl-carousel" id="horror">
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="section-title">
+            <h2>Romance</h2>
+            <div class="angle">
+                <svg class="angleLeft angle-disabled">
+                    <use xlink:href="assets/img/angle.svg#angleLeft"></use>
+                </svg>
+                <svg class="angleRight">
+                    <use xlink:href="assets/img/angle.svg#angleRight"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="section owl-carousel" id="romance">
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="section-title">
+            <h2>Thriller</h2>
+            <div class="angle">
+                <svg class="angleLeft angle-disabled">
+                    <use xlink:href="assets/img/angle.svg#angleLeft"></use>
+                </svg>
+                <svg class="angleRight">
+                    <use xlink:href="assets/img/angle.svg#angleRight"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="section owl-carousel" id="thriller">
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+            <a href="watch">
+                <div class="poster"><img data-src="assets/img/grey.png" class="lazyload" alt="">
+                    <div class="poster-hover"><svg>
+                            <use xlink:href="assets/img/landing.svg#play"></use>
+                        </svg></div>
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/lazysizes.min.js" async=""></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/loadHome.js"></script>
+    <script src="assets/js/carousel.js"></script>
+</body>
+
+</html>

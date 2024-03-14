@@ -1,0 +1,960 @@
+/*############## DEFAULT ##############*/
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+body {
+  background-color: #101011;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.search-results-section .noResults, .trailerSection, .content .posterBackdrop .backdrop .movieDetails .rating, .content .posterBackdrop .backdrop .movieDetails .genres > span, .content .header .year, nav .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .posterBackdrop .backdrop .playTrailer, .content .posterBackdrop .poster .playTrailer, .sideBar ul a li, nav .nav-container .nav-search-input-section input {
+  transition: 0.2s ease;
+}
+
+.sideBar-overlay, .search-overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  transition: 0.2s linear;
+}
+
+.sideBar-overlay-active, .search-overlay-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff002e;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 46, 0.8);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 12px;
+}
+
+/*############## END DEFAULT ##############*/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #101011;
+  width: 100%;
+  margin: 0 auto;
+  height: 100px;
+  padding: 15px;
+  z-index: 2;
+}
+@media (max-width: 576px) {
+  nav {
+    position: absolute;
+    background-color: unset;
+    height: auto;
+    padding: 22px 15px;
+    z-index: 4;
+  }
+}
+nav .nav-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 576px) {
+  nav .nav-container {
+    justify-content: space-between;
+  }
+}
+nav .nav-container .nav-menu-icon,
+nav .nav-container .nav-arrowLeft-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  nav .nav-container .nav-menu-icon,
+  nav .nav-container .nav-arrowLeft-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+nav .nav-container .nav-arrowLeft-icon {
+  display: none;
+}
+nav .nav-container a .nav-logo,
+nav .nav-container a .nav-flogo {
+  width: auto;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+nav .nav-container .nav-logo-a {
+  display: block;
+}
+@media (max-width: 576px) {
+  nav .nav-container .nav-logo-a {
+    display: none;
+  }
+}
+nav .nav-container .nav-flogo-a {
+  display: none;
+}
+@media (max-width: 576px) {
+  nav .nav-container .nav-flogo-a {
+    display: block;
+    height: 28px;
+  }
+}
+nav .nav-container .nav-search-input-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 48px;
+  display: none;
+}
+nav .nav-container .nav-search-input-section.mobile {
+  top: 50%;
+  left: unset;
+  right: 0;
+  transform: translateY(-50%);
+  width: calc(100% - 80px);
+}
+@media (max-width: 576px) {
+  nav .nav-container .nav-search-input-section {
+    display: none;
+  }
+}
+nav .nav-container .nav-search-input-section svg {
+  position: absolute;
+  left: 15px;
+  width: 23px;
+  height: 23px;
+  align-self: center;
+}
+nav .nav-container .nav-search-input-section input {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #666666;
+  border-radius: 50px;
+  padding: 10px 35px 10px 45px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+nav .nav-container .nav-search-input-section input:hover {
+  border-color: #999;
+}
+nav .nav-container .nav-search-input-section input:focus {
+  border-color: #0078d7;
+}
+nav .nav-container .nav-search-input-section img {
+  position: absolute;
+  right: 15px;
+  width: 23px;
+  height: 23px;
+  align-self: center;
+  animation: spinner 1.2s infinite linear;
+  display: none;
+}
+nav .nav-container .nav-search-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  nav .nav-container .nav-search-icon {
+    display: none;
+  }
+}
+nav .nav-container .nav-search-icon-mobile {
+  display: none;
+  width: 28px;
+  height: 28px;
+  margin-left: 0;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  nav .nav-container .nav-search-icon-mobile {
+    display: block;
+  }
+}
+
+.search-overlay {
+  top: 100px;
+  left: 0;
+}
+@media (max-width: 576px) {
+  .search-overlay {
+    top: 0;
+    z-index: 3;
+  }
+}
+
+.sideBar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  bottom: 0;
+  background-color: #191919;
+  max-width: 280px;
+  width: 100%;
+  transition: 0.35s cubic-bezier(0.6, 0.05, 0.28, 0.91);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  transition: 0.35s cubic-bezier(0.6, 0.05, 0.28, 0.91);
+  z-index: 4;
+}
+.sideBar img {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 35px;
+  cursor: pointer;
+}
+.sideBar ul {
+  width: 100%;
+  margin: 0;
+  padding: 125px 0 30px 0;
+}
+.sideBar ul a {
+  text-decoration: none;
+}
+.sideBar ul a li {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #fff;
+  padding: 15px 30px;
+}
+.sideBar ul a li:hover {
+  background-color: #303030;
+}
+.sideBar ul a .sidebar-active-list {
+  border-left: 7px solid #ff002e;
+  padding-left: 23px;
+}
+
+.sideBar-active {
+  left: 0;
+}
+
+.sideBar-overlay {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.content {
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+  margin: 100px auto 0;
+  padding: 15px;
+}
+@media (max-width: 576px) {
+  .content {
+    margin: 80px auto;
+  }
+}
+.content .header {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px auto 15px;
+}
+.content .header h1 {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: left;
+  color: #fff;
+}
+.content .header .year {
+  position: relative;
+  background-color: #ff002e;
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.content .movieDetails span {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.8);
+}
+.content .posterBackdrop {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 30px;
+}
+@media (max-width: 576px) {
+  .content .posterBackdrop {
+    display: unset;
+  }
+}
+.content .posterBackdrop .ratio {
+  position: relative;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding-bottom: 150%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.content .posterBackdrop .ratio-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border: none;
+  border-radius: 10px;
+}
+.content .posterBackdrop .poster {
+  position: relative;
+  width: 100%;
+}
+@media (max-width: 576px) {
+  .content .posterBackdrop .poster {
+    display: none;
+  }
+}
+.content .posterBackdrop .poster .playTrailer {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  background-color: #ff002e;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.content .posterBackdrop .poster .playTrailer:hover {
+  background-color: rgba(255, 0, 46, 0.8);
+}
+.content .posterBackdrop .backdrop {
+  position: relative;
+  width: 100%;
+}
+.content .posterBackdrop .backdrop .ratio {
+  padding-bottom: 50% !important;
+}
+.content .posterBackdrop .backdrop .ratio img {
+  z-index: -1;
+}
+.content .posterBackdrop .backdrop .ratio svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  fill: rgba(255, 255, 255, 0.9);
+}
+@media (max-width: 768px) {
+  .content .posterBackdrop .backdrop .ratio svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 576px) {
+  .content .posterBackdrop .backdrop .ratio svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+.content .posterBackdrop .backdrop .overview {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+@media (max-width: 576px) {
+  .content .posterBackdrop .backdrop .overview {
+    font-size: 17px;
+  }
+}
+.content .posterBackdrop .backdrop .movieDetails {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px -5px;
+}
+@media (max-width: 576px) {
+  .content .posterBackdrop .backdrop .movieDetails {
+    margin: 25px -5px;
+  }
+}
+.content .posterBackdrop .backdrop .movieDetails .genres {
+  display: flex;
+  align-items: center;
+}
+.content .posterBackdrop .backdrop .movieDetails .genres > span {
+  background-color: #343434;
+  width: auto;
+  height: 30px;
+  padding: 4px 12px;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+}
+.content .posterBackdrop .backdrop .movieDetails .rating {
+  background-color: #343434;
+  width: auto;
+  height: 30px;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+}
+.content .posterBackdrop .backdrop .movieDetails .rating img {
+  width: 15px;
+  height: 15px;
+}
+.content .posterBackdrop .backdrop .movieDetails .rating span {
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #fff;
+  margin-left: 5px !important;
+}
+.content .posterBackdrop .backdrop .playTrailer {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  background-color: #ff002e;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  display: none;
+}
+.content .posterBackdrop .backdrop .playTrailer:hover {
+  background-color: rgba(255, 0, 46, 0.8);
+}
+@media (max-width: 576px) {
+  .content .posterBackdrop .backdrop .playTrailer {
+    display: block;
+  }
+}
+
+.trailerSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s linear;
+}
+.trailerSection.active {
+  visibility: visible;
+  opacity: 1;
+}
+.trailerSection img {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.trailerSection .ratioSection {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+}
+.trailerSection .ratioSection .ratio {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+.trailerSection .ratioSection .ratio iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.seasons-episodes-bigscreen-header {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 30px;
+  margin-top: 75px;
+}
+.seasons-episodes-bigscreen-header > div {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .seasons-episodes-bigscreen-header > div:first-child {
+    display: none;
+  }
+}
+
+.seasons-episodes-bigscreen {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 30px;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .seasons-episodes-bigscreen {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+}
+.seasons-episodes-bigscreen .season-dropdown {
+  position: relative;
+  margin: 0;
+  height: auto;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .seasons-episodes-bigscreen .season-dropdown {
+    width: 150px;
+    margin-top: -85px;
+    margin-left: auto;
+  }
+}
+.seasons-episodes-bigscreen .season-dropdown .selected-season-container {
+  background-color: #28282b;
+  max-width: 250px;
+  width: 100%;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: none;
+  border-radius: 10px;
+  margin: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.seasons-episodes-bigscreen .season-dropdown .selected-season-container .dropdown-arrow {
+  width: 22px;
+  height: 22px;
+  margin-left: auto;
+  margin-right: -5px;
+}
+.seasons-episodes-bigscreen .season-dropdown .season-list {
+  position: absolute;
+  top: 48px;
+  background-color: #28282b;
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  min-height: 75px;
+  max-height: 274px;
+  flex-direction: column;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 0px;
+  overflow-y: auto;
+  opacity: 0;
+}
+.seasons-episodes-bigscreen .season-dropdown .season-list.active {
+  opacity: 1;
+  transition: 0.2s ease-out;
+  top: 63px;
+}
+.seasons-episodes-bigscreen .season-dropdown .season-list .season-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #b3b3b3;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+.seasons-episodes-bigscreen .season-dropdown .season-list .season-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.seasons-episodes-bigscreen .episodes {
+  position: relative;
+  width: 100%;
+}
+.seasons-episodes-bigscreen .episodes .episode {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  height: 120px;
+  padding: 30px 0;
+  border: none;
+  border-radius: 10px;
+  box-sizing: content-box;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .seasons-episodes-bigscreen .episodes .episode {
+    height: 72px;
+    margin-bottom: 60px;
+  }
+}
+.seasons-episodes-bigscreen .episodes .episode .episode-number {
+  flex-shrink: 0;
+  width: 40px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  color: #b3b3b3;
+}
+@media (max-width: 576px) {
+  .seasons-episodes-bigscreen .episodes .episode .episode-number {
+    display: none;
+  }
+}
+.seasons-episodes-bigscreen .episodes .episode .episode-image {
+  width: 200px;
+  height: 100%;
+}
+@media (max-width: 576px) {
+  .seasons-episodes-bigscreen .episodes .episode .episode-image {
+    width: 120px;
+  }
+}
+.seasons-episodes-bigscreen .episodes .episode .episode-image img {
+  width: 200px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border: none;
+  border-radius: 5px;
+}
+@media (max-width: 576px) {
+  .seasons-episodes-bigscreen .episodes .episode .episode-image img {
+    width: 120px;
+  }
+}
+.seasons-episodes-bigscreen .episodes .episode .episode-details {
+  width: 100%;
+  padding-left: 15px;
+}
+@media (max-width: 576px) {
+  .seasons-episodes-bigscreen .episodes .episode .episode-details {
+    width: calc(100% - 120px);
+  }
+}
+.seasons-episodes-bigscreen .episodes .episode .episode-details .episode-details-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+@media (max-width: 576px) {
+  .seasons-episodes-bigscreen .episodes .episode .episode-details .episode-details-head {
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+.seasons-episodes-bigscreen .episodes .episode .episode-details .episode-details-head .episode-number-smallscreen {
+  display: none;
+}
+@media (max-width: 576px) {
+  .seasons-episodes-bigscreen .episodes .episode .episode-details .episode-details-head .episode-number-smallscreen {
+    display: inline;
+  }
+}
+.seasons-episodes-bigscreen .episodes .episode .episode-details .episode-details-head .episode-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+.seasons-episodes-bigscreen .episodes .episode .episode-details .episode-details-head .episode-duration {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .seasons-episodes-bigscreen .episodes .episode .episode-details .episode-details-head .episode-duration {
+    color: #b3b3b3;
+    margin-top: 2px;
+  }
+}
+.seasons-episodes-bigscreen .episodes .episode .episode-details .episode-overview {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 576px) {
+  .seasons-episodes-bigscreen .episodes .episode .episode-details .episode-overview {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+#videoBeingLoaded {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  overflow: hidden;
+  pointer-events: none;
+  display: none;
+}
+#videoBeingLoaded img {
+  width: 80px;
+  height: 80px;
+  animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#videoNotFound {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: #fff;
+  z-index: 9;
+  overflow: hidden;
+  pointer-events: none;
+  display: none;
+}
+
+.search-results-section {
+  position: relative;
+  background-color: #101011;
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  padding: 15px;
+  top: 100px;
+  display: none;
+}
+.search-results-section h2 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 45px;
+}
+.search-results-section .search-results {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 20px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1440px) {
+  .search-results-section .search-results {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+@media (max-width: 1200px) {
+  .search-results-section .search-results {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  .search-results-section .search-results {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .search-results-section .search-results {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .search-results-section .search-results {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 414px) {
+  .search-results-section .search-results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.search-results-section .search-results a {
+  text-decoration: none;
+}
+.search-results-section .search-results a .poster {
+  position: relative;
+  width: 100%;
+  padding-bottom: 150%;
+  background-color: #161616;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.search-results-section .search-results a .poster img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border: none;
+  border-radius: 10px;
+}
+.search-results-section .search-results a .poster .lazyload,
+.search-results-section .search-results a .poster .lazyloading {
+  opacity: 0;
+}
+.search-results-section .search-results a .poster .lazyloaded {
+  opacity: 1;
+  transition: 300ms linear;
+}
+.search-results-section .search-results a .poster .lazyload:not([src]) {
+  visibility: hidden;
+}
+.search-results-section .noResults {
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  display: none;
+}
+.search-results-section .noResults div {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: #fff;
+}
+.search-results-section .noResults div span {
+  font-weight: 600;
+}/*# sourceMappingURL=watch.css.map */

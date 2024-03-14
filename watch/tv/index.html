@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<base href="../../" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Fliiix</title>
+	<link rel="icon" type="image/png" href="assets/img/favicon.ico" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/normalize.css" />
+	<link rel="stylesheet" href="assets/css/watch.css" />
+	<script src="assets/js/hls.js"></script>
+</head>
+
+<body>
+	<nav>
+		<div class="container nav-container">
+			<svg class="nav-menu-icon" id="menu">
+				<use xlink:href="assets/img/navbar.svg#menu"></use>
+			</svg>
+			<svg class="nav-arrowLeft-icon" id="arrowLeft">
+				<use xlink:href="assets/img/navbar.svg#arrowLeft"></use>
+			</svg>
+			<a href="" class="nav-logo-a"><img src="assets/img/logo.svg" class="nav-logo" alt="Fliiix Logo" /></a>
+			<a href="" class="nav-flogo-a"><img src="assets/img/fLogo.svg" class="nav-flogo" alt="Fliiix Logo" /></a>
+			<div class="nav-search-input-section">
+				<svg class="nav-input-search-icon">
+					<use xlink:href="assets/img/navbar.svg#search"></use>
+				</svg>
+				<input type="text" class="nav-search-input" placeholder="Search" />
+				<img src="assets/img/spinner.png" class="search-data-spinner" alt="" />
+			</div>
+			<svg id="search" class="nav-search-icon">
+				<use xlink:href="assets/img/navbar.svg#search"></use>
+			</svg>
+			<svg class="nav-search-icon-mobile" id="mobileSearch">
+				<use xlink:href="assets/img/navbar.svg#search"></use>
+			</svg>
+		</div>
+	</nav>
+
+	<div class="search-overlay"></div>
+	<div class="search-results-section container">
+		<h2>MOVIES</h2>
+		<div class="search-results"></div>
+		<div class="noResults">
+			<div>The search for <span class="noResultsSearch"></span> did not have any matches</div>
+		</div>
+	</div>
+
+	<div class="sideBar">
+		<img src="assets/img/logo.svg" class="sideBar-logo" alt="" />
+		<ul>
+			<a href="">
+				<li class="sidebar-active-list">Home</li>
+			</a>
+			<a href="genre">
+				<li>Action</li>
+			</a>
+			<a href="genre">
+				<li>Adventure</li>
+			</a>
+			<a href="genre">
+				<li>Animation</li>
+			</a>
+			<a href="genre">
+				<li>Comedy</li>
+			</a>
+			<a href="genre">
+				<li>Crime</li>
+			</a>
+			<a href="genre">
+				<li>Drama</li>
+			</a>
+			<a href="genre">
+				<li>Family</li>
+			</a>
+			<a href="genre">
+				<li>Fantasy</li>
+			</a>
+			<a href="genre">
+				<li>Horror</li>
+			</a>
+			<a href="genre">
+				<li>Mystery</li>
+			</a>
+			<a href="genre">
+				<li>Romance</li>
+			</a>
+			<a href="genre">
+				<li>Sci-Fi</li>
+			</a>
+			<a href="genre">
+				<li>Thriller</li>
+			</a>
+			<a href="">
+				<li class="sideBar-close">Close</li>
+			</a>
+		</ul>
+	</div>
+	<div class="sideBar-overlay"></div>
+
+	<div class="content">
+		<div class="header">
+			<h1 class="title"></h1>
+			<div class="year"></div>
+		</div>
+
+		<div class="posterBackdrop">
+			<div class="poster">
+				<div class="ratio">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjEBMT+w8AAcoBQl+TCJsAAAAASUVORK5CYII="
+						class="ratio-img" alt="" />
+				</div>
+				<button class="playTrailer">PLAY TRAILER</button>
+			</div>
+			<div class="backdrop">
+				<div class="ratio" id="play-movie">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjEBMT+w8AAcoBQl+TCJsAAAAASUVORK5CYII="
+						class="ratio-img" alt="" />
+					<svg>
+						<use xlink:href="assets/img/landing.svg#play"></use>
+					</svg>
+				</div>
+				<p class="overview"></p>
+				<div class="movieDetails">
+					<div class="genres"></div>
+					<div class="rating">
+						<img src="assets/img/start.svg" alt="" />
+						<span></span>
+					</div>
+				</div>
+				<button class="playTrailer">PLAY TRAILER</button>
+			</div>
+		</div>
+
+		<div class="seasons-episodes-bigscreen-header">
+			<div>Seasons</div>
+			<div>Episodes</div>
+		</div>
+		<div class="seasons-episodes-bigscreen">
+			<div class="season-dropdown">
+				<div class="selected-season-container">
+					<div class="selected-season">Season 1</div>
+					<img src="assets/img/dropdown.svg" class="dropdown-arrow" alt="">
+				</div>
+				<div class="season-list">
+					<!-- <div class="season-option">Season 1</div>
+					<div class="season-option">Season 2</div>
+					<div class="season-option">Season 3</div>
+					<div class="season-option">Season 4</div>
+					<div class="season-option">Season 5</div> -->
+				</div>
+			</div>
+			<div class="episodes">
+				<!-- <div class="episode">
+					<div class="episode-number">1</div>
+					<div class="episode-image">
+						<img src="https://media.themoviedb.org/t/p/w454_and_h254_bestv2/e0JOHvfWgEf1VCp4IIFCj1KVa8Q.jpg"
+							alt="">
+					</div>
+					<div class="episode-details">
+						<div class="episode-details-head">
+							<div class="episode-title"><span class="episode-number-smallscreen">1. </span>Don't Give Up
+							</div>
+							<div class="episode-duration">48m</div>
+						</div>
+						<div class="episode-overview">Haunted by nightmares and afraid of his newfound powers, Rasmus
+							voluntarily confines himself at Apollon. Meanwhile, Simone ventures beyond the wall.</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+
+		<!-- <div class="season-dropdown">
+				<div class="selected-season-container">
+					<div class="selected-season">Season 1</div>
+					<img src="assets/img/dropdown.svg" class="dropdown-arrow" alt="">
+				</div>
+				<div class="season-list">
+					<div class="season-option">Season 1</div>
+					<div class="season-option">Season 2</div>
+					<div class="season-option">Season 3</div>
+					<div class="season-option">Season 4</div>
+					<div class="season-option">Season 5</div>
+				</div>
+			</div> -->
+
+
+		<!-- <div class="episodes">
+			<div class="episode">
+				<div class="episode-number">1</div>
+				<div class="episode-image">
+					<img src="https://media.themoviedb.org/t/p/w454_and_h254_bestv2/e0JOHvfWgEf1VCp4IIFCj1KVa8Q.jpg"
+						alt="">
+				</div>
+				<div class="episode-details">
+					<div class="episode-details-head">
+						<div class="episode-title">Don't Give Up</div>
+						<div class="episode-duration">48m</div>
+					</div>
+					<div class="episode-overview">Haunted by nightmares and afraid of his newfound powers, Rasmus
+						voluntarily confines himself at Apollon. Meanwhile, Simone ventures beyond the wall.</div>
+				</div>
+			</div>
+		</div> -->
+
+
+	</div>
+
+	<div class="trailerSection">
+		<img src="assets/img/close.svg" id="closeTrailer" alt="" />
+		<div class="ratioSection">
+			<div class="ratio">
+				<iframe src="#" id="trailer" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+
+	<div id="videoBeingLoaded">
+		<img src="assets/img/spinner.png" alt="" />
+	</div>
+
+	<div id="videoNotFound">Failed to load the video :'( Please try again.</div>
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/lazysizes.min.js" async=""></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/watch_tv.js"></script>
+</body>
+
+</html>

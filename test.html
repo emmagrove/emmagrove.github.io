@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate HTML Snippets</title>
+</head>
+
+<body>
+    <div id="output"></div>
+
+    <script>
+        const apiKey = 'e47a385fbe50d749ea94bcb4ef1e0fe9';
+        const baseSearchUrl = 'https://api.themoviedb.org/3/search/multi';
+        const baseImageUrl = 'https://image.tmdb.org/t/p/w400';
+
+        const mediaList = [
+            "Stranger Things",
+            "All of Us are dead",
+            "Bridgerton",
+            "The Witcher",
+            "the iron giant",
+            "Breaking bad",
+            "money heist",
+            "Bird Box",
+            "Chappie",
+            "The maze runner",
+            "Alice in Borderland",
+            "Bloodhound",
+            "luca",
+            "The Walking Dead: Dead City",
+            "midnight in paris",
+            "brave"
+        ];
+
+        const outputDiv = document.getElementById('output');
+
+        mediaList.forEach(media => {
+            fetch(`${baseSearchUrl}?api_key=${apiKey}&query=${encodeURIComponent(media)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.results && data.results.length > 0) {
+                        const result = data.results[0];
+                        if (result.poster_path) {
+                            const posterUrl = baseImageUrl + result.poster_path;
+                            const htmlSnippet = `<a href="watch/${result.media_type}/${result.id}"><div class="poster"><img data-src="${posterUrl}" class="lazyload" alt=""><div class="poster-hover"><svg><use xlink:href="assets/img/landing.svg#play"></use></svg></div></div></a>`;
+                            outputDiv.innerHTML += htmlSnippet;
+                        } else {
+                            outputDiv.innerHTML += `No poster available for '${media}'<br>`;
+                        }
+                    } else {
+                        outputDiv.innerHTML += `No results found for '${media}'<br>`;
+                    }
+                })
+                .catch(error => {
+                    console.error(`Error fetching data for '${media}':`, error);
+                    outputDiv.innerHTML += `Error fetching data for '${media}'<br>`;
+                });
+        });
+    </script>
+</body>
+
+</html>
